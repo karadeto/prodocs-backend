@@ -1,0 +1,44 @@
+[project]
+name = "prodocs-backend"
+version = "0.1.0"
+description = "ProDocs backend — AI document management (Python rewrite)"
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi>=0.115",
+    "uvicorn[standard]>=0.34",
+    "pydantic>=2.10",
+    "pydantic-settings>=2.7",
+    "pydantic-ai>=0.2",
+    "sqlalchemy[asyncio]>=2.0.36",
+    "asyncpg>=0.30",
+    "pgvector>=0.3.6",
+    "procrastinate>=3.0",
+    "boto3>=1.35",
+    "pyjwt>=2.10",
+    "sse-starlette>=2.1",
+    "openai>=1.60",
+    "pypdf>=5.1",
+    "httpx>=0.28",
+    "python-multipart>=0.0.20",
+    "email-validator>=2",
+]
+
+[project.optional-dependencies]
+# docling is a large install (models, torch); only needed for scanned/image documents.
+parse = ["docling>=2.15"]
+dev = ["pytest>=8", "pytest-asyncio>=0.25", "ruff>=0.8"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+asyncio_mode = "auto"
+
+[tool.ruff]
+line-length = 110
+target-version = "py312"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["app"]
