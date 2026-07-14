@@ -1,6 +1,6 @@
 # ProDocs Web
 
-Web client for the Python backend (`backend-py/`). Replaces `frontend/` (which targeted the
+Web client for the Python backend (`backend/`). Replaces `frontend/` (which targeted the
 old .NET API and is now reference-only).
 
 ## Stack
@@ -43,7 +43,7 @@ npm install
 npm run dev        # http://localhost:3000, proxies /api -> http://127.0.0.1:5275
 ```
 
-Backend must be running (see `backend-py/README.md`). Without `SUPABASE_URL` configured
+Backend must be running (see `backend/README.md`). Without `SUPABASE_URL` configured
 on the backend, any email/password works (local dev tokens).
 
 `npm run build` outputs static files to `dist/` and typechecks.

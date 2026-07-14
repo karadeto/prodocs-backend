@@ -68,7 +68,7 @@ Design rules carried over from the post-mortem of the .NET version:
 ## Getting started
 
 ```bash
-cd backend-py
+cd backend
 cp .env.example .env       # fill in OPENAI_API_KEY (or Azure), SUPABASE_JWT_SECRET
 make install               # uv sync --extra dev
 make db-up                 # local pgvector via docker compose
