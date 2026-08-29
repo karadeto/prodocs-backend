@@ -3,9 +3,7 @@
 AI document management: scan a document, it files itself into the right folder; ask
 questions across everything you've filed.
 
-This is the Python/React rewrite of the original .NET + Flutter app, rebuilt around the
-lessons from that first implementation: **fewer LLM decision points, deterministic-first
-routing, verifiable evidence instead of self-reported confidence, and evals from day one.**
+This is the Python/React rewrite of the original .NET + Flutter app
 
 ## Repo layout
 
